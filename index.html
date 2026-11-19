@@ -346,6 +346,17 @@ section{position:relative}
 /* CRO before/after */
 .cro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:40px;align-items:center}
 .phones{display:grid;grid-template-columns:1fr 1fr auto;gap:18px;align-items:start}
+.aq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:start;justify-items:center}
+.aq-ph{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0;width:100%}
+.aq-ph .pp-l{font-size:11px;font-weight:900;letter-spacing:.14em;padding:5px 12px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
+.aq-scr{position:relative;width:100%;max-width:250px;cursor:zoom-in}
+.aq-img{border:6px solid #222;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
+.aq-img img{width:100%;height:auto;display:block}
+.aq-mk{position:absolute;right:-12px;width:26px;height:26px;margin-top:-13px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:900;display:grid;place-items:center;border:2px solid var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.aq-list{list-style:none;display:grid;grid-template-columns:1fr;gap:10px;margin-top:4px}
+.aq-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:700}
+.aq-list li b{flex:none;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:900;display:grid;place-items:center;margin-top:1px}
+.aq-list small{display:block;font-weight:500;color:var(--muted);font-size:12.5px}
 .pp{display:flex;flex-direction:column;align-items:center;gap:12px}
 .pp-l{font-size:11px;font-weight:900;letter-spacing:.14em;padding:5px 12px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line-2)}
 .pp.after .pp-l{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
@@ -553,6 +564,10 @@ footer a:hover{color:var(--text)}
   .phone{max-width:280px;margin:0 auto;width:100%}
   .phone .scr{min-height:0}
   .phones{grid-template-columns:1fr 1fr;gap:12px}
+  .aq{gap:14px}
+  .aq-img{border-width:4px;border-radius:18px}
+  .aq-mk{width:20px;height:20px;margin-top:-10px;font-size:10px;right:-8px}
+  .aq-ph .pp-l{font-size:9.5px;padding:4px 9px}
   .annos{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:10px 16px}
   .annos li{max-width:none;flex:1 1 40%;font-size:12.5px}
   .mock{border-width:5px;border-radius:18px}
@@ -922,45 +937,36 @@ footer a:hover{color:var(--text)}
         <div class="cro">
           <div style="display:flex;flex-direction:column;gap:16px">
             <span class="kicker">Conversion rate optimisation</span>
-            <h4>4 product page changes. Same traffic, more orders.</h4>
+            <h4>Aqua Ace HA: a product page built to earn trust.</h4>
             <p class="d">Product page rebuilds covering swatches, sizes, offers and hierarchy, tested against ATC% and conversion rate.</p>
             <div class="stat-row" style="margin-top:6px">
               <div class="st"><b>6% <em>→ 11%</em></b><span>Add-to-cart rate</span></div>
               <div class="st"><b><em>+2%</em></b><span>Conversion rate</span></div>
             </div>
-            <span class="note">Men's trousers product page, before and after.</span>
-          </div>
-          <div class="phones">
-            <div class="pp"><span class="pp-l">BEFORE</span>
-              <div class="mock">
-                <div class="pimg"></div>
-                <div class="t1">Black Everyday Stretch Pant</div>
-                <div class="pr">Rs. 999 <s>Rs. 1,999</s> <em>50% OFF</em></div>
-                <div class="sw"><i style="background:#111"></i><i style="background:#8B7765"></i><i style="background:#555"></i></div>
-                <div class="sz"><span>28</span><span>30</span><span>32</span><span>34</span></div>
-                <div class="atc">+ ADD TO BAG</div>
-                <div class="ln" style="width:70%"></div><div class="ln" style="width:90%"></div><div class="ln" style="width:55%"></div>
-              </div>
-            </div>
-            <div class="pp after"><span class="pp-l">AFTER</span>
-              <div class="mock">
-                <div class="pimg"></div>
-                <div class="t1">Black Everyday Stretch Pant</div>
-                <div class="pr">Rs. 999 <s>Rs. 1,999</s> <em>50% OFF</em></div>
-                <div class="sw"><i style="background:#111"></i><i style="background:#8B7765"></i><i style="background:#555"></i><i style="background:#ccc"></i><i style="background:#1E2A44"></i></div>
-                <div class="sz" style="position:relative"><span>28</span><span>30</span><span>32</span><span>34</span><span>36</span><span>38</span><span>40</span><span>8XL</span><b class="mk" style="top:4px">1</b></div>
-                <div class="atc">+ ADD TO BAG</div>
-                <div class="bnd" style="position:relative"><span>20%<small>BUY 3</small></span><span>15%<small>BUY 2</small></span><span>10%<small>BUY 1</small></span><p>Extra 5% off on prepaid</p><b class="mk" style="top:6px">2</b></div>
-                <div class="spec" style="position:relative"><div><b>Fit</b>Regular</div><div><b>Fabric</b>Poly / spandex</div><div><b>Rise</b>Mid</div><div><b>Pockets</b>4</div><b class="mk" style="top:2px">3</b></div>
-                <div class="usp" style="position:relative"><span></span><span></span><b class="mk" style="top:6px">4</b></div>
-              </div>
-            </div>
-            <ol class="annos">
-              <li><div>Sizes up to 8XL<small>No lost buyers at checkout</small></div></li>
-              <li><div>Bundling offers<small>Lifts units per order</small></div></li>
-              <li><div>Specifications<small>Fit, fabric, rise, pockets</small></div></li>
-              <li><div>Product USPs<small>Fabric and fit details</small></div></li>
+            <ol class="aq-list">
+              <li><b>1</b><span>Dermatologist video in the product card<small>Creates trust at first glance</small></span></li>
+              <li><b>2</b><span>“Trusted by 1000+ dermatologists”<small>Offline trust, right under the title</small></span></li>
+              <li><b>3</b><span>Desired results as tags<small>Glowing skin, even tone, acne control</small></span></li>
+              <li><b>4</b><span>Description that leads with USPs<small>Gel-based, non-comedogenic, 5 HA + 4 ceramides</small></span></li>
+              <li><b>5</b><span>“Meet the actives” section<small>Ingredients explained visually</small></span></li>
+              <li><b>6</b><span>Top 3 reasons to choose the brand<small>“Why trust Aqua Ace HA?”</small></span></li>
+              <li><b>7</b><span>Instagram feed<small>Social proof from real channels</small></span></li>
             </ol>
+            <span class="note">Aqua Ace HA gel product page (aquaaceha.com), mobile.</span>
+          </div>
+          <div class="aq">
+            <figure class="aq-ph"><span class="pp-l">ABOVE THE FOLD</span>
+              <div class="aq-scr" data-zoom="assets/cro/aquaace-above-fold.png">
+                <div class="aq-img"><img src="assets/cro/aquaace-above-fold.png" alt="Aqua Ace HA product page, above the fold: product card with dermatologist video, trust line, result tags and USP description" loading="lazy"/></div>
+                <b class="aq-mk" style="top:48%">1</b><b class="aq-mk" style="top:60%">2</b><b class="aq-mk" style="top:66%">3</b><b class="aq-mk" style="top:74%">4</b>
+              </div>
+            </figure>
+            <figure class="aq-ph"><span class="pp-l">BELOW THE FOLD</span>
+              <div class="aq-scr" data-zoom="assets/cro/aquaace-below-fold.png">
+                <div class="aq-img"><img src="assets/cro/aquaace-below-fold.png" alt="Aqua Ace HA product page, below the fold: actives section, why trust Aqua Ace HA, Instagram feed" loading="lazy"/></div>
+                <b class="aq-mk" style="top:9%">5</b><b class="aq-mk" style="top:42%">6</b><b class="aq-mk" style="top:86%">7</b>
+              </div>
+            </figure>
           </div>
         </div>
       </article>
