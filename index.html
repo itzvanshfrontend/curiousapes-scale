@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Scale your D2C brand profitably | Curious Apes</title>
-<meta name="description" content="Stuck below profitable ROAS or stuck at breakeven? Curious Apes helps Indian D2C brands scale profitably. ₹50Cr+ ad budget managed, ₹200Cr+ revenue generated, 4x average ROAS." />
+<meta name="description" content="Stuck below profitable ROAS or stuck at breakeven? Curious Apes helps Indian D2C brands scale profitably. ₹60Cr+ ad budget managed, ₹250Cr+ revenue generated, 4x average ROAS." />
 <meta name="robots" content="noindex, nofollow" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,7 +66,37 @@ section{position:relative}
 /* ---------- nav ---------- */
 .nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
 .nav.scrolled{background:rgba(10,10,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;max-width:1320px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px;max-width:1320px}
+.nav-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 13px 7px 10px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;font-weight:700;color:var(--text);background:rgba(255,255,255,.04);white-space:nowrap;margin-left:auto}
+.nav-badge .pulse{width:8px;height:8px}
+/* creatives rows */
+.crx{padding:0 0 100px}
+.crx .marquee+.marquee{margin-top:16px}
+.crx-track{gap:16px;animation-duration:80s}
+.crx .marquee.rev .crx-track{animation-duration:90s}
+.crx .tile{width:250px;flex:none}
+.crx .tile img{width:100%;height:100%;max-width:none;opacity:1}
+/* growth marketing on dark */
+.gm-viz{background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:16px}
+#lv2 .zviz-h{color:var(--dim);margin-bottom:12px}
+#lv2 .hm .rl{color:var(--muted)}
+#lv2 .hm .ch{color:var(--dim)}
+#lv2 .hm .c{height:34px}
+#lv2 .hm .c.z{background:#202024;color:#45454c}
+#lv2 .hm .c.pick{outline-color:#fff}
+#lv2 .insights{margin-top:0}
+#lv2 .insights div{background:var(--panel-2);border:1px solid var(--line)}
+#lv2 .insights i{background:var(--accent);color:var(--accent-ink)}
+#lv2 .rto{gap:5px}
+#lv2 .rr{grid-template-columns:70px minmax(0,1fr) 48px}
+#lv2 .rr .s small{color:var(--dim)}
+#lv2 .rr .tr{background:#202024;height:14px}
+#lv2 .rr .tr .avg{border-left-color:#fff}
+#lv2 .legend{color:var(--muted)}
+.wa-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center}
+/* CRO copy */
+.cro-copy{display:flex;flex-direction:column;gap:16px}
+.cro-stats{margin-top:6px}
 .logo img{height:26px;width:auto;filter:invert(1)}
 .nav-links{display:flex;gap:30px;font-size:14px;font-weight:600;color:var(--muted)}
 .nav-links a:hover{color:var(--text)}
@@ -112,7 +142,7 @@ section{position:relative}
 
 /* ---------- logos ---------- */
 .logos{padding:56px 0 72px}
-.logos-head{text-align:center;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:30px}
+.logos-title{text-align:center;font-size:clamp(26px,3.2vw,42px);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1;margin:0 16px 34px}
 .logos-head b{color:var(--text)}
 .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .marquee+.marquee{margin-top:26px}
@@ -513,6 +543,23 @@ footer a:hover{color:var(--text)}
   .wrap{padding:0 16px}
   .nav-links{display:none}
   .nav .btn-sm{display:none}
+  .nav-badge{font-size:11px;padding:6px 10px 6px 8px}
+  .crx{padding-bottom:72px}
+  .crx .tile{width:170px}
+  .crx-track{gap:10px}
+  .crx .marquee+.marquee{margin-top:10px}
+  .wa-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+  .gm-viz{padding:12px}
+  #lv2 .rr{grid-template-columns:62px minmax(0,1fr) 44px}
+  /* CRO on phones: image first, then pointers, then metrics; shorter */
+  .cro .aq{order:-1}
+  .cro-copy .aq-list{order:5}
+  .cro-copy .cro-stats{order:6}
+  .cro-copy .cro-note{order:7}
+  .aq-list small{display:none}
+  .aq-list{gap:8px}
+  /* reels wall: media only, the lever heading above is enough */
+  #lv3 .wall-card{display:none}
   .hero{padding-top:74px}
   .hero-copy{padding:36px 16px 0;gap:22px}
   .hero-reel{height:500px;padding:4px 16px 0;gap:10px}
@@ -545,6 +592,7 @@ footer a:hover{color:var(--text)}
   .ztext p{font-size:15px}
   .st b{font-size:26px}
   .wa-results{grid-template-columns:minmax(0,1fr);gap:20px;padding:18px}
+  .logos-title{margin-bottom:24px}
   .wa-kpis b{font-size:20px}
   .integ{grid-template-columns:minmax(0,1fr);gap:22px}
   .logo-grid{gap:8px}
@@ -613,11 +661,12 @@ footer a:hover{color:var(--text)}
   <div class="wrap">
     <a href="#top" class="logo" aria-label="Curious Apes home"><img src="https://www.curiousapes.in/scale/assets/logo.png" alt="Curious Apes" /></a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#results">Results</a>
+      <a href="#creatives">Creatives</a>
       <a href="#feedback">Feedback</a>
       <a href="#services">What we do</a>
-      <a href="#work">Our work</a>
+      <a href="#work">Reels</a>
     </nav>
+    <span class="nav-badge"><span class="pulse"></span>110-member in-house team</span>
     <a href="#book" class="btn btn-sm">Book a call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </header>
@@ -629,22 +678,20 @@ footer a:hover{color:var(--text)}
   <div class="hero-panel">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="pill"><span class="pulse"></span>110-member in-house team</span>
         <h1 class="h1">Scaling 7 &amp; 8 figure <span class="hl">D2C brands, profitably.</span></h1>
-        <p class="lead">Ads, creative, retention and CRO, run by one 110-member team under one roof. Built for D2C brands that want to grow without burning margin.</p>
+        <p class="lead">We help brands scale their online presence with proven strategies and cutting-edge technology, combining Tech, Analytics, Visuals &amp; Paid Media.</p>
         <div class="cta-row">
           <a href="#book" class="btn">Book a free growth call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <span class="cta-note">30 minutes. We audit your account and show you where the money leaks.</span>
         </div>
         <div class="stats">
           <div class="stats-label">Our records</div>
-          <div class="stat"><div class="num"><em>₹</em><span data-count="50">50</span> Cr+</div><div class="lbl">Ad budget managed</div></div>
-          <div class="stat"><div class="num"><em>₹</em><span data-count="200">200</span> Cr+</div><div class="lbl">Revenue generated</div></div>
+          <div class="stat"><div class="num"><em>₹</em><span data-count="60">60</span> Cr+</div><div class="lbl">Ad budget managed</div></div>
+          <div class="stat"><div class="num"><em>₹</em><span data-count="250">250</span> Cr+</div><div class="lbl">Revenue generated</div></div>
           <div class="stat"><div class="num"><span data-count="4">4</span><em>x</em></div><div class="lbl">Average ROAS</div></div>
           <div class="stat"><div class="num"><span data-count="110">110</span></div><div class="lbl">In-house team</div></div>
         </div>
       </div>
-      <div class="hero-reel" aria-label="Ad creatives made for our clients">
+      <div class="hero-reel" aria-label="Live Shopify dashboards from client stores">
         <div class="col"><div class="col-track" id="heroA"></div></div>
         <div class="col rev"><div class="col-track" id="heroB"></div></div>
       </div>
@@ -654,97 +701,15 @@ footer a:hover{color:var(--text)}
 
 <!-- ================= LOGOS ================= -->
 <section class="logos" id="clients">
-  <p class="logos-head">Trusted by <b>50+ brands</b> across fashion, jewellery, home and lifestyle</p>
+  <h2 class="logos-title">Trusted by <span class="hl">50+ brands</span></h2>
   <div class="marquee"><div class="mq-track" id="logosA"></div></div>
   <div class="marquee rev"><div class="mq-track" id="logosB"></div></div>
 </section>
 
-<!-- ================= RESULTS ================= -->
-<section class="sec" id="results" style="padding-top:24px;padding-bottom:110px">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="left">
-        <span class="eyebrow">Numbers don't lie</span>
-        <h2 class="h2">Live Shopify dashboards <span class="hl">from client stores.</span></h2>
-        <p class="lead">Monthly gross sales, straight from the admin. Not projections.</p>
-      </div>
-      <div class="arrows">
-        <button class="arrow" id="rPrev" aria-label="Previous result"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
-        <button class="arrow" id="rNext" aria-label="Next result"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      </div>
-    </div>
-  </div>
-  <div class="rtrack" id="rtrack"></div>
-  <div class="wrap">
-    <div class="progress"><span id="rprog"></span></div>
-    <p class="fine-note">Brand names withheld under client agreements. References shared on the call.</p>
-  </div>
-</section>
-
-<!-- ================= PROBLEM ================= -->
-<section class="problem light">
-  <div class="wrap">
-    <div class="center rv">
-      <span class="eyebrow">The problem</span>
-      <h2 class="h2">Two reasons your brand <span class="hl">isn't scaling profitably.</span></h2>
-      <p class="lead">Almost every brand we audit is stuck in one of them. Both are fixable, and both come down to structure rather than budget.</p>
-    </div>
-
-    <div class="prob-grid">
-      <article class="prob rv">
-        <div class="screen">
-          <div class="screen-bar"><i></i>Problem 01</div>
-          <svg viewBox="0 0 400 210" role="img" aria-label="Spend rising while ROAS stays between 1.5x and 2x, below the profitable line">
-            <defs><linearGradient id="bandG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF5C5C" stop-opacity=".22"/><stop offset="1" stop-color="#FF5C5C" stop-opacity=".06"/></linearGradient></defs>
-            <!-- spend bars -->
-            <g fill="#2A2A2F">
-              <rect x="34" y="150" width="22" height="34" rx="3"/><rect x="72" y="142" width="22" height="42" rx="3"/><rect x="110" y="132" width="22" height="52" rx="3"/><rect x="148" y="122" width="22" height="62" rx="3"/><rect x="186" y="110" width="22" height="74" rx="3"/><rect x="224" y="98" width="22" height="86" rx="3"/><rect x="262" y="84" width="22" height="100" rx="3"/><rect x="300" y="70" width="22" height="114" rx="3"/><rect x="338" y="56" width="22" height="128" rx="3"/>
-            </g>
-            <!-- profitable line -->
-            <line x1="24" x2="384" y1="46" y2="46" stroke="#FFD23F" stroke-width="1.5" stroke-dasharray="5 5"/>
-            <text x="384" y="38" text-anchor="end" fill="#FFD23F" font-size="11" font-weight="800" font-family="Inter Tight">PROFITABLE ROAS</text>
-            <!-- band -->
-            <rect x="24" y="96" width="360" height="40" fill="url(#bandG)"/>
-            <text x="30" y="91" fill="#FF8A8A" font-size="10" font-weight="700" font-family="Inter Tight">2.0x</text>
-            <text x="30" y="148" fill="#FF8A8A" font-size="10" font-weight="700" font-family="Inter Tight">1.5x</text>
-            <path d="M45 120 C70 108,85 128,105 116 S140 104,160 122 S200 112,220 106 S255 128,275 118 S315 102,335 124 S360 112,372 116" fill="none" stroke="#FF5C5C" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="372" cy="116" r="5" fill="#FF5C5C"/>
-            <text x="24" y="202" fill="#6C6C73" font-size="10" font-weight="700" font-family="Inter Tight">AD SPEND ↑</text>
-            <text x="384" y="202" text-anchor="end" fill="#6C6C73" font-size="10" font-weight="700" font-family="Inter Tight">ROAS STAYS FLAT</text>
-          </svg>
-        </div>
-        <h3>ROAS never turns profitable</h3>
-        <p>Spend rises, ROAS sits between 1.5x and 2x, and the account never crosses the line where ads actually make money.</p>
-      </article>
-
-      <article class="prob rv">
-        <div class="screen">
-          <div class="screen-bar"><i></i>Problem 02</div>
-          <svg viewBox="0 0 400 210" role="img" aria-label="Revenue grows to breakeven then every scale attempt drops ROAS and lifts RTO">
-            <line x1="24" x2="384" y1="96" y2="96" stroke="#A1A1A8" stroke-width="1.2" stroke-dasharray="5 5"/>
-            <text x="24" y="88" fill="#A1A1A8" font-size="11" font-weight="800" font-family="Inter Tight">BREAKEVEN</text>
-            <path d="M30 176 C70 170,100 150,130 120 S170 98,185 97 L205 80 L222 128 L240 98 L262 76 L280 134 L298 99 L320 72 L338 140 L356 100 L376 98" fill="none" stroke="#3DDC97" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-            <path d="M30 176 C70 170,100 150,130 120 S170 98,185 97" fill="none" stroke="#3DDC97" stroke-width="3"/>
-            <g font-family="Inter Tight" font-size="9.5" font-weight="800">
-              <circle cx="222" cy="128" r="5" fill="#FF5C5C"/><circle cx="280" cy="134" r="5" fill="#FF5C5C"/><circle cx="338" cy="140" r="5" fill="#FF5C5C"/>
-              <rect x="190" y="150" width="64" height="20" rx="10" fill="#2A1416"/><text x="222" y="163.5" text-anchor="middle" fill="#FF8A8A">ROAS ↓</text>
-              <rect x="248" y="156" width="64" height="20" rx="10" fill="#2A1416"/><text x="280" y="169.5" text-anchor="middle" fill="#FF8A8A">RTO ↑</text>
-              <rect x="306" y="162" width="64" height="20" rx="10" fill="#2A1416"/><text x="338" y="175.5" text-anchor="middle" fill="#FF8A8A">MARGIN ↓</text>
-              <text x="205" y="70" text-anchor="middle" fill="#6C6C73">SCALE</text><text x="262" y="66" text-anchor="middle" fill="#6C6C73">SCALE</text><text x="320" y="62" text-anchor="middle" fill="#6C6C73">SCALE</text>
-            </g>
-            <text x="24" y="202" fill="#6C6C73" font-size="10" font-weight="700" font-family="Inter Tight">FOUND WHAT WORKS</text>
-            <text x="384" y="202" text-anchor="end" fill="#6C6C73" font-size="10" font-weight="700" font-family="Inter Tight">EVERY PUSH SNAPS BACK</text>
-          </svg>
-        </div>
-        <h3>Growth stalls at breakeven</h3>
-        <p>You've found what works. But every attempt to scale past it kills ROAS, lifts RTOs and eats the margin.</p>
-      </article>
-    </div>
-
-    <div class="center rv">
-      <a href="#book" class="btn">Book a free growth call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    </div>
-  </div>
+<!-- ================= CREATIVES ================= -->
+<section class="crx" id="creatives" aria-label="Ad creatives made for our clients">
+  <div class="marquee"><div class="mq-track crx-track" id="crxA"></div></div>
+  <div class="marquee rev"><div class="mq-track crx-track" id="crxB"></div></div>
 </section>
 
 <!-- ================= FEEDBACK ================= -->
@@ -814,97 +779,62 @@ footer a:hover{color:var(--text)}
 </section>
 
 <!-- ---------- 02 GROWTH MARKETING ---------- -->
-<section class="lv light" id="lv2" data-lv="1">
+<section class="lv lv-dark2" id="lv2" data-lv="1">
   <div class="wrap">
     <div class="lv-head rv">
       <div class="lv-num">02</div>
       <div><span class="eyebrow">Growth marketing</span><h3>The margin work beyond ads: order value, returns and repeat revenue.</h3></div>
     </div>
 
-    <div class="zrow">
-      <div class="ztext rv">
+    <div class="bento">
+      <article class="bx s6 rv">
         <span class="kicker">Increasing AOV</span>
         <h4>What sells together, sold together.</h4>
-        <p>Bought together analysis by category drives the cross sell, upsell and cart value offers we put live.</p>
-        <div class="chips"><span>Cross sell</span><span>Upsell</span><span>Cart value offers</span></div>
-      </div>
-      <div class="zviz rv">
-        <div class="zviz-h"><span>Bought-together matrix · Jewellery</span><span>Orders</span></div>
-        <div class="hm" id="heat"></div>
+        <p class="d">Bought together analysis by category drives the cross sell, upsell and cart value offers we put live.</p>
+        <div class="gm-viz">
+          <div class="zviz-h"><span>Bought-together matrix · Jewellery</span><span>Orders</span></div>
+          <div class="hm" id="heat"></div>
+        </div>
         <div class="insights">
           <div><b>Rakhi × Rakhi</b> 221 orders<i>Buy-2 offer</i></div>
-          <div><b>Ring × Ring</b> 27 · <b>Nosepin × Nosepin</b> 27<i>Multi-buy</i></div>
           <div><b>Ring × Payal</b> 14 orders<i>Bundle</i></div>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="zrow flip">
-      <div class="ztext rv">
+      <article class="bx s6 rv">
         <span class="kicker">Decreasing RTOs</span>
         <h4>Find the states that send it back.</h4>
-        <p>State and pin code RTO analysis, blocking of high RTO pin codes, and prepaid incentives tested at checkout.</p>
-        <div class="zbig"><div><b>8,109</b><span>Orders analysed</span></div><div><b>26.2%</b><span>Average RTO</span></div><div><b>43.4%</b><span>Worst state (AS)</span></div></div>
-        <div class="chips"><span>Block high-RTO pin codes</span><span>Prepaid incentives</span></div>
-      </div>
-      <div class="zviz rv">
-        <div class="zviz-h"><span>RTO % by state</span><span>Orders</span></div>
-        <div class="rto" id="rto"></div>
-        <div class="legend"><span><i style="background:#FF6B5E"></i>Above average</span><span><i style="background:#3DDC97"></i>Below average</span><span><i style="border-left:2px dashed #0B0B0C;width:2px;border-radius:0"></i>26.2% average</span></div>
-      </div>
-    </div>
+        <p class="d">State and pin code RTO analysis, blocking of high RTO pin codes, and prepaid incentives tested at checkout.</p>
+        <div class="gm-viz">
+          <div class="zviz-h"><span>RTO % by state · 8,109 orders</span><span>26.2% avg</span></div>
+          <div class="rto" id="rto"></div>
+          <div class="legend"><span><i style="background:#FF6B5E"></i>Above average</span><span><i style="background:#3DDC97"></i>Below average</span></div>
+        </div>
+      </article>
 
-    <div class="zrow">
-      <div class="ztext rv">
-        <span class="kicker">Retention marketing</span>
-        <h4>WhatsApp flows that bring them back.</h4>
-        <p>Abandoned cart, post purchase and win back flows on WhatsApp, built around actual customer behaviour.</p>
-        <p>On top of the flows, regular WhatsApp campaigns to past buyers drive repeat purchases.</p>
-        <div class="chips"><span>Abandoned cart</span><span>Post purchase</span><span>Win back</span><span>Repeat purchase campaigns</span></div>
-      </div>
-      <div class="zviz rv">
-        <div class="zviz-h"><span>Abandoned cart flow · live</span><span style="color:#1BA35A">● Active</span></div>
-        <div class="flow">
-          <ol class="steps">
-            <li><span class="dot tr">⚡</span><div><b>Checkout abandoned</b><small>Triggered from GoKwik checkout</small></div></li>
-            <li><span class="dot wa">1</span><div><span class="wait">Wait 1 hour</span><b>“Stop ghosting your cart”</b><small>Offer creative + cart link</small></div></li>
-            <li><span class="dot">?</span><div><b>Ordered?</b><small>Yes → exit flow. No → continue</small></div></li>
-            <li><span class="dot wa">2</span><div><span class="wait">Wait 5 hours</span><b>“You've got great taste”</b><small>Social proof on the same product</small></div></li>
-            <li><span class="dot wa">3</span><div><span class="wait">Wait 15 hours, then 3 days</span><b>“Decision-making is hard”</b><small>Final nudge with the offer</small></div></li>
-          </ol>
-          <div class="phone"><div class="scr">
-            <div class="wa-top"><i>CA</i><div>Your Brand<small>WhatsApp Business</small></div></div>
-            <div class="wa-body">
-              <span class="wa-day">TODAY</span>
-              <div class="bub"><div class="img">SUPER SALE<br>EXCITING OFFERS</div>Stop ghosting your cart, Priya 👀 Your picks are still waiting.<time>8:14 pm</time></div>
-              <div class="bub">You've got great taste, Priya ✨ This one is a bestseller for a reason.<time>1:14 am</time></div>
-              <span class="wa-day">3 DAYS LATER</span>
-              <div class="bub">Decision-making is hard 💭 Here's an extra nudge before it sells out.<time>11:02 am</time></div>
+      <article class="bx s12 rv">
+        <div class="wa-grid">
+          <div class="wa-copy">
+            <span class="kicker">Retention marketing</span>
+            <h4>WhatsApp flows and campaigns that drive repeat purchases.</h4>
+            <p class="d">Abandoned cart, post purchase and win back flows on WhatsApp, built around actual customer behaviour, plus regular campaigns to past buyers.</p>
+            <div class="wa-kpis">
+              <div><b>₹2.00M</b><span>Campaign revenue</span></div>
+              <div><b>₹183K</b><span>Spend</span></div>
+              <div><b class="up">10.9x</b><span>ROI</span></div>
             </div>
-          </div></div>
+            <div class="chips"><span>Abandoned cart</span><span>Post purchase</span><span>Win back</span><span>Repeat purchase</span></div>
+            <span class="note">Live dashboard from a client's WhatsApp marketing account, 23 campaigns.</span>
+          </div>
+          <div class="wa-shot" data-zoom="assets/whatsapp-campaigns.png"><img src="assets/whatsapp-campaigns.png" alt="WhatsApp campaign dashboard: ₹2.00M revenue, ₹183.04K expenditure, 10.9x ROI across 23 campaigns" loading="lazy"/></div>
         </div>
-      </div>
-    </div>
-
-    <div class="wa-results rv">
-      <div class="wa-copy">
-        <span class="kicker">Repeat purchase from WhatsApp campaigns</span>
-        <h4>₹2.00M in revenue from 23 WhatsApp campaigns.</h4>
-        <p>Sale drops, festive pushes and abandoned cart broadcasts sent to existing customers, tracked campaign by campaign.</p>
-        <div class="wa-kpis">
-          <div><b>₹2.00M</b><span>Campaign revenue</span></div>
-          <div><b>₹183K</b><span>Spend</span></div>
-          <div><b class="up">10.9x</b><span>ROI</span></div>
-        </div>
-        <span class="note">Live dashboard from a client's WhatsApp marketing account.</span>
-      </div>
-      <div class="wa-shot" data-zoom="assets/whatsapp-campaigns.png"><img src="assets/whatsapp-campaigns.png" alt="WhatsApp campaign dashboard: ₹2.00M revenue, ₹183.04K expenditure, 10.9x ROI across 23 campaigns" loading="lazy"/></div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ---------- 03 VISUALS & CREATIVE ---------- -->
-<section class="lv" id="lv3" data-lv="2" style="padding-bottom:0">
+<section class="lv" id="lv3" data-lv="2" style="padding-bottom:0;border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="lv-head rv">
       <div class="lv-num">03</div>
@@ -925,7 +855,7 @@ footer a:hover{color:var(--text)}
 </section>
 
 <!-- ---------- 04 TECH & CRO ---------- -->
-<section class="lv lv-dark2" id="lv4" data-lv="3">
+<section class="lv" id="lv4" data-lv="3" style="border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="lv-head rv">
       <div class="lv-num">04</div>
@@ -935,11 +865,11 @@ footer a:hover{color:var(--text)}
     <div class="bento">
       <article class="bx s12 rv">
         <div class="cro">
-          <div style="display:flex;flex-direction:column;gap:16px">
+          <div class="cro-copy">
             <span class="kicker">Conversion rate optimisation</span>
             <h4>Aqua Ace HA: a product page built to earn trust.</h4>
-            <p class="d">We rebuilt the skincare product page around trust: dermatologist proof, desired results and USPs above the fold; actives, reasons to choose the brand and social proof below it. Tested against ATC% and conversion rate.</p>
-            <div class="stat-row" style="margin-top:6px">
+            <p class="d">A trust-first product page for a skincare brand, tested against ATC% and conversion rate.</p>
+            <div class="stat-row cro-stats">
               <div class="st"><b>6% <em>→ 11%</em></b><span>Add-to-cart rate</span></div>
               <div class="st"><b><em>+2%</em></b><span>Conversion rate</span></div>
             </div>
@@ -952,7 +882,7 @@ footer a:hover{color:var(--text)}
               <li><b>6</b><span>Top 3 reasons to choose the brand<small>“Why trust Aqua Ace HA?”</small></span></li>
               <li><b>7</b><span>Instagram feed<small>Social proof from real channels</small></span></li>
             </ol>
-            <span class="note">Aqua Ace HA gel product page (aquaaceha.com), mobile.</span>
+            <span class="note cro-note">Aqua Ace HA gel product page (aquaaceha.com), mobile.</span>
           </div>
           <div class="aq">
             <figure class="aq-ph"><span class="pp-l">ABOVE THE FOLD</span>
@@ -1129,9 +1059,15 @@ function tile(it,eager){
   const tall = it.id==="ad-18";
   return `<div class="tile ${tall?"reel":"sq"}" data-zoom="${CR+it.id}.webp"><img src="${CR+it.id}.webp" alt="Static ad creative" loading="${eager?"eager":"lazy"}"/><span class="badge">Static ad</span></div>`;
 }
-/* hero columns */
-$("#heroA").innerHTML = [...HERO_A,...HERO_A].map(x=>tile(x,true)).join("");
-$("#heroB").innerHTML = [...HERO_B,...HERO_B].map(x=>tile(x,true)).join("");
+/* hero columns: live Shopify dashboards */
+function dashCard(r){return `<div class="case" data-zoom="${u(r.img)}"><img src="${u(r.img)}" alt="${r.alt}"/><div class="meta"><div><div class="amt">${r.amt} <small>/ month</small></div><div class="cat">${r.cat}</div></div><span class="chip">${arrowSvg}${r.up}%</span></div></div>`}
+const DA = RESULTS.filter((_,i)=>i%2===0), DB = RESULTS.filter((_,i)=>i%2===1);
+$("#heroA").innerHTML = [...DA,...DA].map(dashCard).join("");
+$("#heroB").innerHTML = [...DB,...DB].map(dashCard).join("");
+
+/* creatives rows after the logos */
+$("#crxA").innerHTML = [...HERO_A,...HERO_A].map(x=>tile(x,false)).join("");
+$("#crxB").innerHTML = [...HERO_B,...HERO_B].map(x=>tile(x,false)).join("");
 
 /* logos */
 const half = Math.ceil(CLIENTS.length/2);
@@ -1139,19 +1075,6 @@ const logoHTML = arr => arr.map(([n,s])=>`<img src="${u(s)}" alt="${n}" loading=
 const logosA = CLIENTS.slice(0,half), logosB = CLIENTS.slice(half);
 $("#logosA").innerHTML = logoHTML([...logosA,...logosA]);
 $("#logosB").innerHTML = logoHTML([...logosB,...logosB]);
-
-/* results carousel */
-$("#rtrack").innerHTML = RESULTS.map(r=>`
-  <article class="rcard">
-    <div class="rcard-top"><div class="big">${r.amt} <small>/ month</small><span class="cat">${r.cat}</span></div><span class="chip">${arrowSvg}${r.up}%</span></div>
-    <div class="rshot" data-zoom="${u(r.img)}"><img src="${u(r.img)}" alt="${r.alt}" loading="lazy"/></div>
-  </article>`).join("");
-const rt = $("#rtrack"), rp = $("#rprog");
-const step = () => (rt.querySelector(".rcard")?.offsetWidth || 400) + 18;
-$("#rPrev").onclick = () => rt.scrollBy({left:-step(),behavior:"smooth"});
-$("#rNext").onclick = () => rt.scrollBy({left: step(),behavior:"smooth"});
-function rUpdate(){const max=rt.scrollWidth-rt.clientWidth;const vis=rt.clientWidth/rt.scrollWidth;rp.style.width=Math.min(100,(vis+(max?rt.scrollLeft/max:0)*(1-vis))*100)+"%"}
-rt.addEventListener("scroll",rUpdate,{passive:true});addEventListener("resize",rUpdate);rUpdate();
 
 /* ---------- services renderers ---------- */
 const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
@@ -1177,7 +1100,7 @@ const lakh = n => n>=1e7 ? "₹"+(n/1e7).toFixed(2)+" Cr" : "₹"+(n/1e5).toFixe
 /* heatmap */
 (function(){const mx=Math.log(222);let h=`<span></span>${HEAT.cols.map(c=>`<span class="ch">${c}</span>`).join("")}`;
   HEAT.rows.forEach(([r,vals],ri)=>{h+=`<span class="rl">${r}</span>`+vals.map((v,ci)=>{const pick=HEAT.picks.some(([a,b])=>a===ri&&b===ci);
-    if(!v)return `<span class="c z">0</span>`;const t=Math.log(v+1)/mx;return `<span class="c${pick?' pick':''}" style="background:rgba(255,210,63,${(.15+.85*t).toFixed(2)})">${v}</span>`}).join("")});
+    if(!v)return `<span class="c z">0</span>`;const t=Math.log(v+1)/mx;const a=.15+.85*t;return `<span class="c${pick?' pick':''}" style="background:rgba(255,210,63,${a.toFixed(2)});color:${a>.55?'#0B0B0C':'#F5F5F2'}">${v}</span>`}).join("")});
   $("#heat").innerHTML=h;})();
 
 /* RTO bars (scale 0–50%) */
