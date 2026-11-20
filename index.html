@@ -70,7 +70,8 @@ section{position:relative}
 .nav-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 13px 7px 10px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;font-weight:700;color:var(--text);background:rgba(255,255,255,.04);white-space:nowrap;margin-left:auto}
 .nav-badge .pulse{width:8px;height:8px}
 /* creatives rows */
-.crx{padding:0 0 100px}
+.crx{padding:24px 0 100px}
+.crx-head{margin-bottom:40px}
 .crx .marquee+.marquee{margin-top:16px}
 .crx-track{gap:16px;animation-duration:80s}
 .crx .marquee.rev .crx-track{animation-duration:90s}
@@ -708,6 +709,10 @@ footer a:hover{color:var(--text)}
 
 <!-- ================= CREATIVES ================= -->
 <section class="crx" id="creatives" aria-label="Ad creatives made for our clients">
+  <div class="wrap center crx-head rv">
+    <span class="eyebrow">Our creatives</span>
+    <h2 class="h2">Thumb-stopping ads. <span class="hl">Built to convert.</span></h2>
+  </div>
   <div class="marquee"><div class="mq-track crx-track" id="crxA"></div></div>
   <div class="marquee rev"><div class="mq-track crx-track" id="crxB"></div></div>
 </section>
@@ -1040,7 +1045,7 @@ const V = (pre, n, tag) => ({ k:"v", id:`${pre}-v${pad(n)}`, tag });
 const I = n => ({ k:"i", id:`ad-${pad(n)}` });
 /* hero: static ad creatives only (no videos) */
 const HERO_A = [1,37,19,41,24,33,44,5,29,42,25,14].map(n=>I(n));
-const HERO_B = [12,38,22,40,27,18,39,30,35,43,9,34].map(n=>I(n));
+const HERO_B = [12,38,22,40,27,13,39,30,35,43,9,34].map(n=>I(n));
 /* wall: all reels (social + ad) and the remaining statics */
 /* keep reels few (one per column) so the page stays smooth; statics fill the rest */
 const WALL_VIDS = [V("sm",1,"Social reel"),V("ad",2,"Ad reel"),V("sm",7,"Social reel"),V("ad",7,"Ad reel"),V("sm",4,"Social reel"),V("ad",13,"Ad reel")];
