@@ -147,6 +147,7 @@ section{position:relative}
 .logos-head b{color:var(--text)}
 .marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
 .marquee+.marquee{margin-top:26px}
+.lg-m{display:none}
 .mq-track{display:flex;gap:64px;width:max-content;align-items:center;animation:leftX 60s linear infinite}
 .marquee.rev .mq-track{animation-direction:reverse;animation-duration:70s}
 .marquee:hover .mq-track{animation-play-state:paused}
@@ -646,8 +647,11 @@ footer a:hover{color:var(--text)}
   .form{padding:26px 20px;box-shadow:6px 6px 0 var(--accent)}
   .mcta{display:block}
   footer{padding-bottom:100px}
-  .mq-track{gap:44px}
-  .mq-track img{height:32px}
+  .lg-d{display:none}
+  .lg-m{display:block}
+  .logos .marquee+.marquee{margin-top:18px}
+  .logos .mq-track{gap:36px;animation-duration:38s}
+  .logos .mq-track img{height:42px;max-width:130px;opacity:.85}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -702,8 +706,13 @@ footer a:hover{color:var(--text)}
 <!-- ================= LOGOS ================= -->
 <section class="logos" id="clients">
   <h2 class="logos-title">Trusted by <span class="hl">50+ brands</span></h2>
-  <div class="marquee"><div class="mq-track" id="logosA"></div></div>
-  <div class="marquee rev"><div class="mq-track" id="logosB"></div></div>
+  <div class="marquee lg-d"><div class="mq-track" id="logosA"></div></div>
+  <div class="marquee rev lg-d"><div class="mq-track" id="logosB"></div></div>
+  <!-- phones: 4 shorter rows so each logo is bigger and easier to read -->
+  <div class="marquee lg-m"><div class="mq-track" id="logosM1"></div></div>
+  <div class="marquee rev lg-m"><div class="mq-track" id="logosM2"></div></div>
+  <div class="marquee lg-m"><div class="mq-track" id="logosM3"></div></div>
+  <div class="marquee rev lg-m"><div class="mq-track" id="logosM4"></div></div>
 </section>
 
 <!-- ================= CREATIVES ================= -->
@@ -1079,6 +1088,7 @@ const logoHTML = arr => arr.map(([n,s])=>`<img src="${u(s)}" alt="${n}" loading=
 const logosA = CLIENTS.slice(0,half), logosB = CLIENTS.slice(half);
 $("#logosA").innerHTML = logoHTML([...logosA,...logosA]);
 $("#logosB").innerHTML = logoHTML([...logosB,...logosB]);
+[0,1,2,3].forEach(k=>{const part=CLIENTS.filter((_,i)=>i%4===k);$("#logosM"+(k+1)).innerHTML=logoHTML([...part,...part,...part])});
 
 /* ---------- services renderers ---------- */
 const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
