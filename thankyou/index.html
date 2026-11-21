@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Thank You | Curious Apes</title>
+<meta name="description" content="Thanks for reaching out to Curious Apes. We'll get back to you within 24 hours." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0A0A0B;--panel:#131315;--panel-2:#1A1A1D;
+  --line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);
+  --text:#F5F5F2;--muted:#A1A1A8;--dim:#6C6C73;
+  --accent:#FFD23F;--accent-ink:#151200;--up:#3DDC97;
+  --font:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{overflow-x:clip;min-height:100vh;display:flex;flex-direction:column;background:
+  radial-gradient(900px 520px at 15% -5%,rgba(255,210,63,.14),transparent 60%),
+  radial-gradient(800px 520px at 100% 100%,rgba(61,220,151,.07),transparent 60%),var(--bg);
+  color:var(--text);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
+
+/* top bar */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{height:74px;display:flex;align-items:center}
+.logo img{height:26px;width:auto;filter:invert(1)}
+
+/* main */
+main{flex:1;display:flex;align-items:center;padding:72px 0 64px}
+.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center}
+.copy{display:flex;flex-direction:column;gap:24px}
+.check{width:72px;height:72px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(255,210,63,.12),0 0 0 22px rgba(255,210,63,.05);animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.check svg{width:34px;height:34px;color:var(--accent-ink)}
+.check path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .5s .35s ease forwards}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(255,210,63,.22)}
+h1{font-size:clamp(44px,6.4vw,84px);font-weight:900;text-transform:uppercase;letter-spacing:-.025em;line-height:.95}
+.hl{color:var(--accent)}
+.lead{font-size:clamp(16px,1.4vw,19px);color:var(--muted);max-width:540px}
+.lead b{color:var(--text)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);border:2px solid var(--accent-ink);box-shadow:4px 4px 0 #fff;transition:transform .15s,box-shadow .15s;align-self:flex-start}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #fff}
+.btn svg{width:18px;height:18px}
+.fast{display:flex;flex-direction:column;gap:10px}
+.fast small{font-size:13px;color:var(--dim)}
+
+.stats{display:grid;grid-template-columns:repeat(4,max-content);justify-content:space-between;gap:12px 28px;border-top:1px solid var(--line);padding-top:24px;margin-top:4px}
+.stats-label{grid-column:1/-1;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:-4px}
+.stat b{display:block;font-size:clamp(24px,2.3vw,34px);font-weight:900;letter-spacing:-.03em;line-height:1;white-space:nowrap}
+.stat b em{font-style:normal;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* next steps card */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:26px;padding:32px;display:flex;flex-direction:column;gap:22px;box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.card h2{font-size:24px;font-weight:800;letter-spacing:-.015em}
+.steps{list-style:none;display:flex;flex-direction:column;gap:4px;position:relative}
+.steps li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;padding:12px 0;position:relative}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:17px;top:48px;bottom:-4px;border-left:2px dashed var(--line-2)}
+.steps .n{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:900;background:var(--panel-2);border:1.5px solid var(--line-2);color:var(--text)}
+.steps li.done .n{background:var(--up);border-color:var(--up);color:#062015}
+.steps b{display:block;font-size:16px;font-weight:800}
+.steps small{font-size:14px;color:var(--muted)}
+.call{display:flex;flex-direction:column;gap:10px;padding:18px;border-radius:16px;background:var(--panel-2);border:1px solid var(--line)}
+.call .k{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.call ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.call li{display:flex;gap:10px;font-size:14.5px;font-weight:600}
+.call li::before{content:"✓";color:var(--up);font-weight:900}
+
+/* creatives strip */
+.strip{padding:0 0 56px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.strip-track{display:flex;gap:14px;width:max-content;animation:left 70s linear infinite}
+.strip img{width:170px;height:170px;border-radius:16px;object-fit:cover;border:1px solid var(--line);opacity:.9}
+@keyframes left{to{transform:translateX(-50%)}}
+
+footer{border-top:1px solid var(--line);padding:26px 0 32px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a:hover{color:var(--text)}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:minmax(0,1fr);gap:40px}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  main{padding:44px 0 40px}
+  .check{width:60px;height:60px}
+  .check svg{width:28px;height:28px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+  .stat b{font-size:26px}
+  .btn{width:100%;justify-content:center;white-space:normal;text-align:center;font-size:13px;padding:15px 18px}
+  .card{padding:22px;border-radius:22px}
+  .strip img{width:120px;height:120px;border-radius:12px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.check path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="logo"><img src="https://www.curiousapes.in/scale/assets/logo.png" alt="Curious Apes" /></span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap grid">
+    <div class="copy">
+      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <span class="eyebrow">Request received</span>
+      <h1>We've <span class="hl">got it.</span></h1>
+      <p class="lead">Your message has landed in our inbox. A member of the Curious Apes team will get back to you within <b>24 hours</b>, usually a lot sooner.</p>
+      <div class="fast">
+        <a class="btn" href="https://wa.me/919982898842" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.8 11.9 11.9 0 004.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 001.8-1.3 2.3 2.3 0 00.2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+          WhatsApp us
+        </a>
+        <small>Need a faster reply? Message us on +91 99828 98842.</small>
+      </div>
+      <div class="stats">
+        <div class="stats-label">Our records</div>
+        <div class="stat"><b><em>₹</em>60 Cr+</b><span>Ad budget managed</span></div>
+        <div class="stat"><b><em>₹</em>250 Cr+</b><span>Revenue generated</span></div>
+        <div class="stat"><b>4<em>x</em></b><span>Average ROAS</span></div>
+        <div class="stat"><b>110</b><span>In-house team</span></div>
+      </div>
+    </div>
+
+    <aside class="card">
+      <h2>What happens next</h2>
+      <ol class="steps">
+        <li class="done"><span class="n">✓</span><div><b>Details received</b><small>Your brand and ad spend are with our team.</small></div></li>
+        <li><span class="n">2</span><div><b>We review your account</b><small>A senior strategist looks at your store and ads before the call.</small></div></li>
+        <li><span class="n">3</span><div><b>Free 30 minute call</b><small>We call you within 24 hours to set a time that works.</small></div></li>
+      </ol>
+      <div class="call">
+        <span class="k">On the call</span>
+        <ul>
+          <li>A live audit of your account structure and top spending campaigns</li>
+          <li>Where the funnel leaks: ad, product page or checkout</li>
+          <li>A realistic 90 day scaling target and what it will cost</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<section class="strip" aria-label="Ad creatives made for our clients">
+  <div class="strip-track" id="strip"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Curious Apes · Mansarovar, Jaipur 302020</span>
+    <span><a href="tel:+919982898842">+91 99828 98842</a> · <a href="mailto:info@curiousapes.in">info@curiousapes.in</a></span>
+  </div>
+</footer>
+
+<script>
+/* creatives strip — CR points at the landing page's creatives folder */
+const CR = "../assets/creatives/";
+const picks = [37,1,38,41,19,44,24,39,33,42,12,40,22,43,5,27];
+const html = picks.map(n=>`<img src="${CR}ad-${String(n).padStart(2,"0")}.webp" alt="" loading="lazy" />`).join("");
+document.getElementById("strip").innerHTML = html + html;
+</script>
+</body>
+</html>
